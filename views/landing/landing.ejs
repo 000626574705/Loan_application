@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Landing Page</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .h1size{
+          font-size: 50px;
+        }
+        .parasize{
+          font-size:32px;
+        }
+
+        header img {
+            height: 60px; /* Adjust the height as needed */
+            padding-left: 20px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        .navbar{
+          margin-right: 40px;
+          
+          
+        }
+
+        nav button {
+            margin-left: 10px;
+            padding: 8px 12px;
+            background-color: #327ae6;
+            color: #f5f5f5;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .hero-section {
+            background: url("/images/landing-bg.jpg");
+            height: 500px;
+            padding-top: 50px;
+            padding-left: 25px;
+            text-align: center;
+            color: #f5f5f5;
+            
+        }
+
+        .hero-section h1 {
+            margin-bottom: 20px;
+            
+        }
+
+        .apply-button {
+            padding: 10px 20px;
+            background-color: #7c8cf8;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <img src="/images/logo.svg" alt="logo">
+          
+        </div>
+        <nav class="navbar">
+          <%if (data == null){%>
+           <a href="/auth/sign-in"><button class="butn">Login</button></a> 
+          <%}else{%>
+           <a href="/auth/sign-out"><button class="butn">Sign Out</button></a> 
+          <%}%>
+        </nav>
+    </header>
+
+    <div class="hero-section">
+       
+        <h1 class="h1size">Welcome to Takeloan </h1>
+        <p class="parasize">Get Instant loan in simple steps </p>
+        <a href="/home"><button class="apply-button">Apply Now</button></a>
+    </div>
+
+</body>
+</html>   
